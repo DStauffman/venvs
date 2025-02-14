@@ -59,16 +59,21 @@ Temporary Items
 # Folder/Files #
 # =========================
 aiml/
+aiml311/
+aiml312/
+aiml313/
 core_only/
 core_only310/
 core_only311/
 core_only312/
+core_only313/
 everything/
 everything38/
 everything39/
 everything310/
 everything311/
 everything312/
+everything313/
 hoppr/
 old/
 poetry_env/
@@ -76,7 +81,9 @@ spyder/
 spyder310/
 spyder311/
 spyder312/
+spyder313/
 static/
 static310/
 static311/
 static312/
+static313/

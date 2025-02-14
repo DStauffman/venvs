@@ -15,15 +15,14 @@ rmdir /S /Q static
 py -%py_version% -m venv --upgrade-deps static
 call .\static\Scripts\activate.bat
 python -m pip install pip wheel
-python -m pip install black coverage flake8 h5py matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint PyQt5 PyQt5-Stubs pyright pytest pytest-cov qtpy types-openpyxl types-python-dateutil scipy tblib
+python -m pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint PyQt5 PyQt5-Stubs pyright pytest pytest-cov qtpy scipy tblib types-openpyxl types-python-dateutil
 call deactivate.bat
 
 rmdir /S /Q everything
-REM py -%py_version% -m venv --upgrade-deps everything
-py -3.12 -m venv --upgrade-deps everything
+py -%py_version% -m venv --upgrade-deps everything
 call .\everything\Scripts\activate.bat
 python -m pip install pip wheel
-python -m pip install coverage dask[dataframe] datashader h5py matplotlib mypy numba numpy openpyxl pandas pprofile pyarrow PyPDF2 PyQt5 pyqtgraph pytest pytest-cov qtpy scipy spyder-kernels tblib
+python -m pip install coverage dask[dataframe] datashader h5py matplotlib mypy numba numpy openpyxl pandas pprofile pyarrow PyPDF2 PyQt5 pyqtgraph pytest pytest-cov qtpy scipy spyder-kernels sympy tblib
 call deactivate.bat
 
 rmdir /S /Q spyder
@@ -40,5 +39,6 @@ REM py -%py_version% -m venv --upgrade-deps aiml
 py -3.12 -m venv --upgrade-deps aiml
 call .\aiml\Scripts\activate.bat
 python -m pip install pip wheel
-python -m pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib mypy numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow torch torchvision torchaudio urllib3
+python -m pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib mypy numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio urllib3
+python -m pip install tqdm
 call deactivate.bat
