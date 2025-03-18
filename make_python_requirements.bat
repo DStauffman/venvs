@@ -136,17 +136,17 @@ REM replace underscores with dashes in any requirements file
 python requirements_cleanup.py .
 
 REM build BOM
-REM python -m cyclonedx_py requirements requirements_core_only311_clean.txt -o sbom_core_only311.json --of json
-REM python -m cyclonedx_py requirements requirements_static311_clean.txt -o sbom_static311.json --of json
-REM python -m cyclonedx_py requirements requirements_everything311_clean.txt -o sbom_everything311.json --of json
-REM python -m cyclonedx_py requirements requirements_spyder311_clean.txt -o sbom_spyder311.json --of json
-python -m cyclonedx_py requirements requirements_core_only312_clean.txt -o sbom_core_only312.json --of json
-python -m cyclonedx_py requirements requirements_static312_clean.txt -o sbom_static312.json --of json
-python -m cyclonedx_py requirements requirements_everything312_clean.txt -o sbom_everything312.json --of json
-python -m cyclonedx_py requirements requirements_spyder312_clean.txt -o sbom_spyder312.json --of json
-python -m cyclonedx_py requirements requirements_aiml312_clean.txt -o sbom_aiml312.json --of json
-python -m cyclonedx_py requirements requirements_core_only313_clean.txt -o sbom_core_only313.json --of json
-python -m cyclonedx_py requirements requirements_static313_clean.txt -o sbom_static313.json --of json
-python -m cyclonedx_py requirements requirements_everything313_clean.txt -o sbom_everything313.json --of json
-python -m cyclonedx_py requirements requirements_spyder313_clean.txt -o sbom_spyder313.json --of json
-REM python -m cyclonedx_py requirements requirements_aiml313_clean.txt -o sbom_aiml313.json --of json
+REM python -m cyclonedx_py requirements requirements_core_only311.txt -o sbom_core_only311.json --of json
+REM python -m cyclonedx_py requirements requirements_static311.txt -o sbom_static311.json --of json
+REM python -m cyclonedx_py requirements requirements_everything311.txt -o sbom_everything311.json --of json
+REM python -m cyclonedx_py requirements requirements_spyder311.txt -o sbom_spyder311.json --of json
+python -m cyclonedx_py requirements requirements_core_only312.txt -o sbom_core_only312.json --of json
+python -m cyclonedx_py requirements requirements_static312.txt -o sbom_static312.json --of json
+python -m cyclonedx_py requirements requirements_everything312.txt -o sbom_everything312.json --of json
+python -m cyclonedx_py requirements requirements_spyder312.txt -o sbom_spyder312.json --of json
+python -m cyclonedx_py requirements requirements_aiml312.txt -o sbom_aiml312.json --of json
+python -m cyclonedx_py requirements requirements_core_only313.txt -o sbom_core_only313.json --of json
+python -m cyclonedx_py requirements requirements_static313.txt -o sbom_static313.json --of json
+python -m cyclonedx_py requirements requirements_everything313.txt -o sbom_everything313.json --of json
+python -m cyclonedx_py requirements requirements_spyder313.txt -o sbom_spyder313.json --of json
+REM python -m cyclonedx_py requirements requirements_aiml313.txt -o sbom_aiml313.json --of json
