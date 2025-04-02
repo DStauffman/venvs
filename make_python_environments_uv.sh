@@ -40,7 +40,7 @@ rm -rf aiml
 uv venv aiml --python 3.12
 source aiml/bin/activate
 uv pip install --upgrade pip wheel
-uv pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib mypy numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow torch torchvision torchaudio urllib3
+uv pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib mypy numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow torch torchvision torchaudio tqdm urllib3
 uv pip install tqdm
 deactivate
 
