@@ -59,7 +59,7 @@ rmdir /S /Q everything312
 py -3.12 -m venv --upgrade-deps everything312
 call .\everything312\Scripts\activate.bat
 python -m pip install pip wheel
-python -m pip install coverage dask[dataframe] datashader h5py matplotlib mypy numba numpy openpyxl pandas pprofile pyarrow PyPDF2 PyQt5 pyqtgraph pytest pytest-cov qtpy scipy spyder-kernels sympy tblib
+python -m pip install coverage dask[dataframe] datashader h5py matplotlib mypy numba numpy openpyxl pandas pprofile pyarrow pypdf PyQt5 pyqtgraph pytest pytest-cov qtpy scipy spyder-kernels sympy tblib
 python -m pip freeze > requirements_everything312.txt
 call deactivate.bat
 
@@ -77,8 +77,7 @@ rmdir /S /Q aiml312
 py -3.12 -m venv --upgrade-deps aiml312
 call .\aiml312\Scripts\activate.bat
 python -m pip install pip wheel
-python -m pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib mypy numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio urllib3
-python -m pip install tqdm
+python -m pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib mypy numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
 python -m pip freeze > requirements_aiml312.txt
 call deactivate.bat
 
