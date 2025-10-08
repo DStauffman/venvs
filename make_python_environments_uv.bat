@@ -14,7 +14,7 @@ call deactivate.bat
 rmdir /S /Q static
 uv venv static --python %py_version%
 call .\static\Scripts\activate.bat
-uv pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy sympy tblib types-openpyxl types-python-dateutil
+uv pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy sympy tblib ty types-openpyxl types-python-dateutil
 call deactivate.bat
 
 rmdir /S /Q everything
@@ -35,3 +35,10 @@ uv venv aiml --python 3.12
 call .\aiml\Scripts\activate.bat
 uv pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
 call deactivate.bat
+
+rmdir /S /Q jax
+uv venv jax --python %py_version%
+call .\jax\Scripts\activate.bat
+uv pip install h5py jax keras matplotlib numpy pandas PyQt5 pytest qtpy scipy seaborn tblib
+call deactivate.bat
+

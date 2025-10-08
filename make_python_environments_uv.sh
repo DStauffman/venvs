@@ -14,7 +14,7 @@ deactivate
 rm -rf static
 uv venv static --python $py_version
 source static/bin/activate
-uv pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy sympy tblib types-openpyxl types-python-dateutil
+uv pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy sympy tblib ty types-openpyxl types-python-dateutil
 deactivate
 
 rm -rf everything
@@ -34,4 +34,10 @@ rm -rf aiml
 uv venv aiml --python 3.12
 source aiml/bin/activate
 uv pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow torch torchvision torchaudio tqdm urllib3
+deactivate
+
+rm -rf jax
+uv venv jax --python $py_version
+source jax/bin/activate
+uv pip install h5py jax keras matplotlib numpy pandas PyQt5 pytest qtpy scipy seaborn tblib
 deactivate

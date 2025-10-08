@@ -16,7 +16,7 @@ rm -rf static
 python$py_version -m venv --upgrade-deps static
 source static/bin/activate
 python -m pip install pip wheel
-python -m pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy sympy tblib types-openpyxl types-python-dateutil
+python -m pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy sympy tblib ty types-openpyxl types-python-dateutil
 deactivate
 
 rm -rf everything
@@ -30,9 +30,7 @@ rm -rf spyder
 python$py_version -m venv --upgrade-deps spyder
 source spyder/bin/activate
 python -m pip install pip wheel
-python -m pip install spyder ipykernel jupyterlab notebook numpy pandas
-# This should not be necessary, but fixes problems with the virtual environment within spyder
-python -m pip install h5py tblib
+python -m pip install spyder h5py ipykernel jupyterlab notebook numpy pandas tblib
 deactivate
 
 rm -rf aiml
