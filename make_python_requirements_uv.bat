@@ -129,6 +129,13 @@ uv pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib 
 uv pip freeze > requirements_aiml312.txt
 call deactivate.bat
 
+rmdir /S /Q aiml313
+uv venv aiml312 --python 3.13
+call .\aiml313\Scripts\activate.bat
+uv pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
+uv pip freeze > requirements_aiml313.txt
+call deactivate.bat
+
 rmdir /S /Q jax312
 uv venv jax312 --python 3.12
 call .\jax312\Scripts\activate.bat
@@ -151,7 +158,7 @@ uv pip freeze > requirements_jax314.txt
 call deactivate.bat
 
 rmdir /S /Q hoppr
-uv venv hoppr --python 3.12
+uv venv hoppr --python 3.14
 call .\hoppr\Scripts\activate.bat
 uv pip install cyclonedx-bom hoppr
 

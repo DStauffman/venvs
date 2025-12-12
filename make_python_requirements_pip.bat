@@ -6,6 +6,7 @@ REM py -3.10 -m pip install --upgrade pip
 REM py -3.11 -m pip install --upgrade pip
 py -3.12 -m pip install --upgrade pip
 py -3.13 -m pip install --upgrade pip
+py -3.14 -m pip install --upgrade pip
 
 REM rmdir /S /Q everything38
 REM py -3.8 -m venv everything38
@@ -117,16 +118,15 @@ python -m pip freeze > requirements_spyder313.txt
 call deactivate.bat
 
 REM rmdir /S /Q aiml313
-REM py -3.13 -m venv --upgrade-deps aiml313
-REM call .\aiml313\Scripts\activate.bat
-REM python -m pip install pip wheel
-REM python -m pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib mypy numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio urllib3
-REM python -m pip install tqdm
-REM python -m pip freeze > requirements_aiml313.txt
-REM call deactivate.bat
+py -3.13 -m venv --upgrade-deps aiml313
+call .\aiml313\Scripts\activate.bat
+python -m pip install pip wheel
+python -m pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib mypy numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
+python -m pip freeze > requirements_aiml313.txt
+call deactivate.bat
 
 rmdir /S /Q hoppr
-py -3.12 -m venv --upgrade-deps hoppr
+py -3.14 -m venv --upgrade-deps hoppr
 call .\hoppr\Scripts\activate.bat
 python -m pip install pip wheel
 python -m pip install cyclonedx-bom hoppr

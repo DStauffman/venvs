@@ -1,6 +1,6 @@
 cd C:\Users\%username%\Documents\venvs
 
-set "py_version=3.13"
+set "py_version=3.14"
 
 REM uv self update
 REM winget install --id=astral-sh.uv  -e
@@ -31,7 +31,7 @@ call deactivate.bat
 
 rmdir /S /Q aiml
 REM uv venv aiml --python %py_version%
-uv venv aiml --python 3.12
+uv venv aiml --python 3.13
 call .\aiml\Scripts\activate.bat
 uv pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
 call deactivate.bat

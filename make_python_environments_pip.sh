@@ -1,6 +1,6 @@
 cd $HOME/Documents/venvs
 
-export "py_version=3.13"
+export "py_version=3.14"
 
 #python3.12 -m pip install --upgrade pip
 #python$py_version -m pip install --upgrade pip
@@ -35,9 +35,15 @@ deactivate
 
 rm -rf aiml
 #python$py_version -m venv --upgrade-deps aiml
-python3.12 -m venv --upgrade-deps aiml
+python3.13 -m venv --upgrade-deps aiml
 source aiml/bin/activate
 python -m pip install pip wheel
 python -m pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow torch torchvision torchaudio tqdm urllib3
 deactivate
 
+rm -rf jax
+python$py_version -m venv --upgrade-deps jax
+source jax/bin/activate
+python -m pip install pip wheel
+python -m pip install h5py jax keras matplotlib numpy pandas PyQt5 pytest qtpy scipy seaborn tblib
+deactivate

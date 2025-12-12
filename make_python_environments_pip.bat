@@ -1,6 +1,6 @@
 cd C:\Users\%username%\Documents\venvs
 
-set "py_version=3.13"
+set "py_version=3.14"
 
 py -%py_version% -m pip install --upgrade pip
 
@@ -34,7 +34,7 @@ call deactivate.bat
 
 rmdir /S /Q aiml_pip
 REM py -%py_version% -m venv --upgrade-deps aiml_pip
-py -3.12 -m venv --upgrade-deps aiml_pip
+py -3.13 -m venv --upgrade-deps aiml_pip
 call .\aiml_pip\Scripts\activate.bat
 python -m pip install pip wheel
 python -m pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
