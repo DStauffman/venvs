@@ -14,7 +14,7 @@ deactivate
 rm -rf static
 uv venv static --python $py_version
 source static/bin/activate
-uv pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy sympy tblib ty types-openpyxl types-python-dateutil
+uv pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pandas-stubs pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy scipy-stubs sympy tblib ty types-openpyxl types-python-dateutil
 deactivate
 
 rm -rf everything
