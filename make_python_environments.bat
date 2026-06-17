@@ -14,31 +14,30 @@ call deactivate.bat
 rmdir /S /Q static
 uv venv static --python %py_version%
 call .\static\Scripts\activate.bat
-uv pip install black coverage flake8 h5py isort matplotlib mypy numpy openpyxl pandas pandas-stubs pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov qtpy ruff scipy scipy-stubs sympy tblib ty types-openpyxl types-python-dateutil
+uv pip install black coverage h5py isort lxml lxml-stubs matplotlib mypy numpy openpyxl pandas pandas-stubs pprofile pyarrow pylint pypdf PyQt5 PyQt5-Stubs pytest pytest-cov pyyaml qtpy ruff scipy scipy-stubs sympy tblib ty types-openpyxl types-python-dateutil types-PyYAML
 call deactivate.bat
 
 rmdir /S /Q everything
 uv venv everything --python %py_version%
 call .\everything\Scripts\activate.bat
-uv pip install coverage dask[dataframe] datashader h5py matplotlib numba numpy openpyxl pandas pprofile pyarrow PyQt5 pyqtgraph pytest pytest-cov qtpy scipy spyder-kernels sympy tblib
+uv pip install coverage dask[dataframe] datashader h5py lxml matplotlib numba numpy openpyxl pandas pprofile pyarrow PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scipy spyder-kernels sympy tblib
 call deactivate.bat
 
 rmdir /S /Q spyder
 uv venv spyder --python %py_version%
 call .\spyder\Scripts\activate.bat
-uv pip install spyder h5py ipykernel jupyterlab notebook numpy pandas tblib
+uv pip install spyder h5py numpy pandas tblib
 call deactivate.bat
 
 rmdir /S /Q aiml
 REM uv venv aiml --python %py_version%
 uv venv aiml --python 3.13
 call .\aiml\Scripts\activate.bat
-uv pip install coverage dask[dataframe] datashader graphviz h5py jax matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
+uv pip install coverage dask[dataframe] datashader graphviz h5py jax lxml matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
 call deactivate.bat
 
 rmdir /S /Q jax
 uv venv jax --python %py_version%
 call .\jax\Scripts\activate.bat
-uv pip install h5py jax keras matplotlib numpy pandas PyQt5 pytest qtpy scipy seaborn tblib
+uv pip install h5py jax lxml matplotlib numpy openpyxl pandas PyQt5 pytest pyyaml qtpy scipy tblib
 call deactivate.bat
-
