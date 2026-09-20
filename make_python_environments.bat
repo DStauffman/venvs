@@ -22,7 +22,7 @@ call deactivate.bat
 rmdir /S /Q everything
 uv venv everything --python %py_version%
 call .\everything\Scripts\activate.bat
-uv pip install atlassian-python-api coverage dask[dataframe] datashader dotenv h5py lxml matplotlib numba numpy openpyxl pandas polars pprofile pyarrow PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scipy spyder-kernels tables tblib
+uv pip install atlassian-python-api coverage dask[dataframe] datashader h5py lxml matplotlib numba numpy openpyxl pandas pillow-heif polars pprofile pyarrow PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scipy spyder-kernels sympy tables tblib
 uv pip freeze > requirements_windows_everything.txt
 call deactivate.bat
 

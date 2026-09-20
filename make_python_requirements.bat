@@ -48,14 +48,14 @@ call deactivate.bat
 rmdir /S /Q everything314
 uv venv everything314 --python 3.14
 call .\everything314\Scripts\activate.bat
-uv pip install atlassian-python-api coverage dask[dataframe] datashader h5py lxml matplotlib numba numpy openpyxl pandas pprofile pyarrow PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scipy spyder-kernels sympy tblib
+uv pip install atlassian-python-api coverage dask[dataframe] datashader h5py lxml matplotlib numba numpy openpyxl pandas pillow-heif polars pprofile pyarrow PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scipy spyder-kernels sympy tables tblib
 uv pip freeze > requirements_everything314.txt
 call deactivate.bat
 
 rmdir /S /Q spyder314
 uv venv spyder314 --python 3.14
 call .\spyder314\Scripts\activate.bat
-uv pip install spyder h5py numpy pandas tblib
+uv pip install spyder h5py numpy pandas polars tblib
 uv pip freeze > requirements_spyder314.txt
 call deactivate.bat
 
