@@ -22,15 +22,15 @@ call deactivate.bat
 rmdir /S /Q everything
 uv venv everything --python %py_version%
 call .\everything\Scripts\activate.bat
-uv pip install atlassian-python-api coverage dask[dataframe] datashader h5py lxml matplotlib numba numpy openpyxl pandas pillow-heif polars pprofile pyarrow PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scipy spyder-kernels sympy tables tblib
+uv pip install atlassian-python-api coverage dask[dataframe] datashader h5py lxml matplotlib numba numpy openpyxl pandas pillow-heif polars pprofile pyarrow PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scipy spyder-kernels sympy tables tblib tqdm
 uv pip freeze > requirements_windows_everything.txt
 call deactivate.bat
 
-rmdir /S /Q spyder
-uv venv spyder --python %py_version%
-call .\spyder\Scripts\activate.bat
+rmdir /S /Q spyder_ide
+uv venv spyder_ide --python %py_version%
+call .\spyder_ide\Scripts\activate.bat
 uv pip install spyder h5py numpy pandas polars tblib
-uv pip freeze > requirements_windows_spyder.txt
+uv pip freeze > requirements_windows_spyder_ide.txt
 call deactivate.bat
 
 rmdir /S /Q jupyter
@@ -41,23 +41,22 @@ uv pip freeze > requirements_windows_jupyter.txt
 call deactivate.bat
 
 rmdir /S /Q aiml
-REM uv venv aiml --python %py_version%
-uv venv aiml --python 3.13
+uv venv aiml --python %py_version%
 call .\aiml\Scripts\activate.bat
 uv pip install coverage dask[dataframe] datashader graphviz h5py jax lxml matplotlib numba numpy openpyxl pandas pyarrow pydot PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scikit-learn scipy seaborn spyder-kernels tblib tensorflow-cpu torch torchvision torchaudio tqdm urllib3
 uv pip freeze > requirements_windows_aiml.txt
 call deactivate.bat
 
-rmdir /S /Q jax
-uv venv jax --python %py_version%
-call .\jax\Scripts\activate.bat
+rmdir /S /Q jaxl
+uv venv jaxl --python %py_version%
+call .\jaxl\Scripts\activate.bat
 uv pip install h5py jax lxml matplotlib numpy openpyxl pandas PyQt5 pytest pyyaml qtpy scipy tblib
-uv pip freeze > requirements_windows_jax.txt
+uv pip freeze > requirements_windows_jaxl.txt
 call deactivate.bat
 
 rmdir /S /Q py315
 uv venv py315 --python 3.15
 call .\py315\Scripts\activate.bat
-uv pip install pytest pytest-cov numpy
+uv pip install atlassian-python-api coverage datashader lxml matplotlib numba numpy openpyxl pandas pillow-heif polars pprofile PyQt5 pyqtgraph pytest pytest-cov pyyaml qtpy scipy spyder-kernels sympy tables tblib tqdm
 uv pip freeze > requirements_windows_py315.txt
 call deactivate.bat
